@@ -12,10 +12,9 @@ import { useFonts, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold } fro
 import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { useEffect } from 'react';
-import { Stack } from 'expo-router'; 
-import 'react-native-reanimated';
 import { StatusBar } from 'expo-status-bar';
+import { useEffect } from 'react';
+import 'react-native-reanimated';
 
 import { Toaster } from 'sonner-native';
 import { useColorScheme } from '@/hooks/useColorScheme';

@@ -1,12 +1,13 @@
 // TODO: image placeholder for loading issues, etc.
 // FIXME: migrate to expo-image for better performance
-// FIXME: replace png assets with jpeg counterparts
+// FIXME: replace png assets with svg counterparts (if possible)
 
 import { Theme } from "@/constants/Theme";
 
 import tw from "twrnc";
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+// import { Image } from 'expo-image';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import SplitButton from "@/components/navigation/SplitButton";
@@ -17,7 +18,7 @@ export default function Auth() {
       <SafeAreaView>
         <View style={styles.container}>
           <View style={styles.textContainer}>
-            <Image source={require("@/assets/images/wordmark.png")} style={styles.image} />
+            <Image source={require("@/assets/icons/main/icon.png")} style={styles.image} />
             <Text style={styles.title}>Gather</Text>
           </View>
           <Image source={require("@/assets/images/onboarding/iconspill.png")} style={styles.imageContainer} />

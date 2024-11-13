@@ -4,14 +4,9 @@
     "slug": "gather_v2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icons/main/adaptive.png",
     "scheme": "myapp",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.ios.gather-v2",
@@ -28,10 +23,9 @@
         ]
       }
     },
-    "iosStatusBar": {},
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/icons/main/adaptive.png",
         "backgroundColor": "#ffffff"
       },
       "permissions": [
@@ -46,7 +40,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icons/main/favicon.png"
     },
     "packagerOpts": {
       "config": "metro.config.js",
@@ -65,39 +59,33 @@
       ]
     },
     "plugins": [
-      [
-        "expo-router"
+      ["expo-router"],
+      ["expo-secure-store"],
+      ["expo-splash-screen", {
+            "backgroundColor": "transparent",
+            "image": "./assets/icons/main/splash.png",
+            "imageWidth": 64
+        }
       ],
-      [
-        "expo-secure-store"
-      ],
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "node_modules/@expo-google-fonts/inter/Inter_900Black.ttf",
-            "node_modules/@expo-google-fonts/poppins/Poppins_500Medium.ttf",
-            "node_modules/@expo-google-fonts/poppins/Poppins_600SemiBold.ttf",
-            "node_modules/@expo-google-fonts/poppins/Poppins_700Bold.ttf"
+      ["expo-font", {
+            "fonts": [
+                "node_modules/@expo-google-fonts/inter/Inter_900Black.ttf",
+                "node_modules/@expo-google-fonts/poppins/Poppins_500Medium.ttf",
+                "node_modules/@expo-google-fonts/poppins/Poppins_600SemiBold.ttf",
+                "node_modules/@expo-google-fonts/poppins/Poppins_700Bold.ttf"
           ]
         }
       ],
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+      ["expo-camera", {
+            "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
         }
       ],
-      [
-        "@react-native-google-signin/google-signin",
-        {
-          "iosUrlScheme": "com.googleusercontent.apps.128786716214-6j1dv2adbcrfhjqa4p2r149eqgr7u5mp"
+      ["@react-native-google-signin/google-signin", {
+            "iosUrlScheme": "com.googleusercontent.apps.128786716214-6j1dv2adbcrfhjqa4p2r149eqgr7u5mp"
         }
       ],
-      [
-        "react-native-edge-to-edge"
-      ],
-      "expo-tracking-transparency"
+      ["react-native-edge-to-edge"],
+      ["expo-tracking-transparency"]
     ],
     "experiments": {
       "typedRoutes": true

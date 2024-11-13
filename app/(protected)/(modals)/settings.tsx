@@ -44,7 +44,7 @@ export default function Settings() {
                   router.navigate("/(protected)/(modals)/profile");
                 }}
                 style={styles.profile}>
-                <Image source={require("@/assets/images/wordmark.png")} style={styles.profileAvatar} />
+                <Image source={require("@/assets/icons/main/icon.png")} style={styles.profileAvatar} />
                 <View style={styles.profileBody}>
                   <Text style={styles.profileName}>John Doe</Text>
 

@@ -1,3 +1,5 @@
+// FIXME: use button component instead of Pressable
+
 import { Theme } from "@/constants/Theme";
 
 import tw from "twrnc";
