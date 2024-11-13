@@ -1,0 +1,118 @@
+{
+  "expo": {
+    "name": "gather_v2",
+    "slug": "gather_v2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.ios.gather-v2",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.128786716214-6j1dv2adbcrfhjqa4p2r149eqgr7u5mp"
+            ]
+          }
+        ]
+      }
+    },
+    "iosStatusBar": {},
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.anonymous.gather_v2"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "",
+      "translucent": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-router"
+      ],
+      [
+        "expo-secure-store"
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/inter/Inter_900Black.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_500Medium.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/poppins/Poppins_700Bold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.128786716214-6j1dv2adbcrfhjqa4p2r149eqgr7u5mp"
+        }
+      ],
+      [
+        "react-native-edge-to-edge"
+      ],
+      "expo-tracking-transparency"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d8a58c08-5de6-431a-ae81-f1f5815d2f84"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/d8a58c08-5de6-431a-ae81-f1f5815d2f84"
+    }
+  }
+}

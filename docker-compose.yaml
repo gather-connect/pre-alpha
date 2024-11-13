@@ -1,0 +1,17 @@
+services:
+  pb:
+    container_name: gc_pa_sqlite
+    image: ghcr.io/muchobien/pocketbase:latest
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+    volumes:
+      - pb_data:/var/lib/pb_data
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8090/api/health || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+    pb_data:
